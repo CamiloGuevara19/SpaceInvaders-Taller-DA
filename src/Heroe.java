@@ -1,4 +1,5 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Heroe {
 	
@@ -11,6 +12,8 @@ public class Heroe {
 	
 	Bullet bullet;
 	
+	PImage player;
+	
 
 	public Heroe(int x, int y, int lx, int ly, PApplet app) {
 		this.x = x;
@@ -21,12 +24,12 @@ public class Heroe {
 		this.mov = true;
 		this.app = app;
 		
-		
-		
+		player = app.loadImage("player.png");
+		app.imageMode(app.CENTER);
 	}
 	
 	public void pintar() {
-		app.rect(x, y, lx, ly);
+		app.image(player, x, y, lx, ly);
 		
 		if(bullet != null) {
 			bullet.pintar();

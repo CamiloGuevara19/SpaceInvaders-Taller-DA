@@ -1,4 +1,5 @@
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Regular {
 	
@@ -6,6 +7,8 @@ public class Regular {
 	private int vidas; // 0 muerte, 1 vivo
 	private PApplet app;
 	private boolean mov;
+	
+	PImage regular;
 	
 
 	public Regular(int x, int y, int w, int h, int vidas, PApplet app) {
@@ -18,11 +21,14 @@ public class Regular {
 		this.app = app;
 		this.mov = true;
 		
+		regular = app.loadImage("regular.png");
+		app.imageMode(app.CENTER);
+		
 	}
 	
 	public void pintar() {
 		app.fill(0,0,255);
-		app.ellipse(x, y, w, h);
+		app.image(regular, x, y, w, h);
 		mover();
 	}
 	
