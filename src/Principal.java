@@ -17,7 +17,7 @@ public class Principal extends PApplet{
 	@Override
 	public void setup() {
 		
-		hero = new Heroe(250, 500, 50, 50, this);
+		hero = new Heroe(250, 500, 100, 100, this);
 		enemy1 = new Regular(100,50,50,50,1,this);
 		
 	}

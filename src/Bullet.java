@@ -19,7 +19,7 @@ public class Bullet {
 	
 	public void pintar() {
 		
-		app.ellipse(x, y, 10, 10);
+		app.ellipse(x, y, 15, 15);
 		mover();
 		
 	}
