@@ -67,7 +67,7 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void mousePressed() {
-		//hero.disparar();
+		
 		switch (pantalla) {
 		case 0:
 			if (mouseX > (600 - (260 / 2))
@@ -95,7 +95,7 @@ public class Principal extends PApplet{
 			}
 			break;
 		case 2:
-			
+			hero.disparar();
 			break;
 		case 3:
 			if (mouseX > (130 - (160 / 2))

@@ -23,5 +23,7 @@ public class StartScreen {
 		app.ellipse(1140, 640, 100, 100);
 		app.image(start, 600, 350);
 	}
+	
+	
 
 }
