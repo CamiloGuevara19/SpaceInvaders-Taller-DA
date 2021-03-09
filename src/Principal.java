@@ -61,7 +61,7 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void keyPressed() {
-		hero.mover(key);
+		
 		
 	}
 	

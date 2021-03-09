@@ -27,7 +27,7 @@ public class Regular {
 	}
 	
 	public void pintar() {
-		app.fill(0,0,255);
+		
 		app.image(regular, x, y, w, h);
 		mover();
 	}

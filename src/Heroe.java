@@ -35,6 +35,7 @@ public class Heroe {
 			bullet.pintar();
 		}
 		
+		
 	}
 	
 	public void mover(int key) {
@@ -50,7 +51,6 @@ public class Heroe {
         	if(mov == true && dir == 2) {
         		x+= 10;
         	}
-			
 			break;
 
 		default:

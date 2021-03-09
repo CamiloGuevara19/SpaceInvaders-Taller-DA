@@ -1,6 +1,7 @@
 import java.awt.Font;
 import java.util.ArrayList;
 
+
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -17,6 +18,7 @@ public class PlayScreen {
 	
 	PFont monument;
 	
+	
 	int puntaje = 0;
 
 	public PlayScreen(int x, int y, PApplet app) {
@@ -27,10 +29,12 @@ public class PlayScreen {
 		juego = app.loadImage("juego.jpg");
 		grid = app.loadImage("grid.png");
 		
-		heroe = new Heroe(250, 500, 100, 100, app);
+		heroe = new Heroe(425, 550, 100, 100, app);
 		regulares = new ArrayList<Regular>();
 		
 		monument = app.createFont("MonumentExtended-Regular.otf", 60);
+		
+		app.frameRate(60);
 		
 	}
 	
@@ -48,8 +52,32 @@ public class PlayScreen {
 		
 		heroe.pintar();
 		
+		iniciarRegulars();
+		Regulares();
 		
 		app.image(grid, 600, 350);
 	}
-
+	
+	public void iniciarRegulars() {
+		if(app.frameCount == 60) {
+			int x = (int) app.random(75,775);
+			int w = 50;
+			int h = 50;
+			regulares.add(new Regular(x,-50, w, h, 1, app));
+			System.out.println(regulares.size());
+			app.frameCount = 0;
+		}
+	}
+	
+	public void Regulares() { 
+    	for (int i = 0; i < regulares.size(); i++) {
+    		pintarRegulares(regulares.get(i));
+			
+			
+		}
+	}
+	
+	public void pintarRegulares(Regular regular) {
+		regular.pintar();
+	}
 }
