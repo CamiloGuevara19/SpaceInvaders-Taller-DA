@@ -47,7 +47,7 @@ public class PlayScreen {
 		app.text("00:00", 1045, 309);
 		
 		heroe.pintar();
-		enemy1.pintar();
+		
 		
 		app.image(grid, 600, 350);
 	}
