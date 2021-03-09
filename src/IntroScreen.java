@@ -18,10 +18,9 @@ public class IntroScreen {
 	}
 	
 	public void pintar() {
-		app.image(intro, 600, 350);
 		app.rect(130, 620, 160, 60);
 		app.rect(1069,620,160,60);
-		//app.image(intro, 600, 350);
+		app.image(intro, 600, 350);
 	}
 
 }

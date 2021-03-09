@@ -16,6 +16,8 @@ public class Principal extends PApplet{
 	
 	StartScreen start;
 	IntroScreen intro;
+	PlayScreen juego;
+	ScoreScreen score;
 	
 	int pantalla = 0;
 	
@@ -26,6 +28,8 @@ public class Principal extends PApplet{
 		enemy1 = new Regular(100,50,50,50,1,this);
 		start = new StartScreen(0, 0, this);
 		intro = new IntroScreen(0, 0, this);
+		juego = new PlayScreen(0, 0, this);
+		score = new ScoreScreen(0, 0, this);
 		
 		
 		
@@ -40,6 +44,12 @@ public class Principal extends PApplet{
 			break;
 		case 1:
 			intro.pintar();
+			break;
+		case 2:
+			juego.pintar();
+			break;
+		case 3:
+			score.pintar();
 			break;
 
 		default:
@@ -71,14 +81,34 @@ public class Principal extends PApplet{
 			}
 			break;
 		case 1:
-			if (mouseX > (600 - (260 / 2))
-					&& mouseX < (600 + (260 / 2))
-					&& mouseY > (600 - (40 / 2))
-					&& mouseY < (600 + (40 / 2))) {
-				pantalla = 1;
+			if (mouseX > (130 - (160 / 2))
+					&& mouseX < (130 + (160 / 2))
+					&& mouseY > (620 - (60 / 2))
+					&& mouseY < (620 + (60 / 2))) {
+				pantalla = 0;
 			}
-			if (dist(mouseX, mouseY, 1140, 640) < 50) {
-				pantalla = 1;
+			if (mouseX > (1069 - (160 / 2))
+					&& mouseX < (1069 + (160 / 2))
+					&& mouseY > (620 - (60 / 2))
+					&& mouseY < (620 + (60 / 2))) {
+				pantalla = 2;
+			}
+			break;
+		case 2:
+			
+			break;
+		case 3:
+			if (mouseX > (130 - (160 / 2))
+					&& mouseX < (130 + (160 / 2))
+					&& mouseY > (620 - (60 / 2))
+					&& mouseY < (620 + (60 / 2))) {
+				pantalla = 0;
+			}
+			if (mouseX > (1069 - (160 / 2))
+					&& mouseX < (1069 + (160 / 2))
+					&& mouseY > (620 - (60 / 2))
+					&& mouseY < (620 + (60 / 2))) {
+				pantalla = 2;
 			}
 			break;
 
