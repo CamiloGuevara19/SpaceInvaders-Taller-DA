@@ -80,4 +80,8 @@ public class PlayScreen {
 	public void pintarRegulares(Regular regular) {
 		regular.pintar();
 	}
+	
+	public Heroe getHeroe () {
+		return heroe;
+	}
 }

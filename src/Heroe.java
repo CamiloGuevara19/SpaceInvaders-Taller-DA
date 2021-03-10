@@ -62,4 +62,52 @@ public class Heroe {
 		bullet = new Bullet(x, y, app);
 	}
 
+	public int getX() {
+		return x;
+	}
+
+	public void setX(int x) {
+		this.x = x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public void setY(int y) {
+		this.y = y;
+	}
+
+	public int getLx() {
+		return lx;
+	}
+
+	public void setLx(int lx) {
+		this.lx = lx;
+	}
+
+	public int getLy() {
+		return ly;
+	}
+
+	public void setLy(int ly) {
+		this.ly = ly;
+	}
+
+	public int getDir() {
+		return dir;
+	}
+
+	public void setDir(int dir) {
+		this.dir = dir;
+	}
+
+	public boolean isMov() {
+		return mov;
+	}
+
+	public void setMov(boolean mov) {
+		this.mov = mov;
+	}
+
 }

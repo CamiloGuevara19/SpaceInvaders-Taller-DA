@@ -61,7 +61,7 @@ public class Principal extends PApplet{
 	
 	@Override
 	public void keyPressed() {
-		
+		juego.getHeroe().mover(key);
 		
 	}
 	
@@ -95,7 +95,7 @@ public class Principal extends PApplet{
 			}
 			break;
 		case 2:
-			hero.disparar();
+			juego.getHeroe().disparar();
 			break;
 		case 3:
 			if (mouseX > (130 - (160 / 2))
